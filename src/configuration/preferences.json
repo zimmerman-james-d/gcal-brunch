@@ -1,0 +1,7 @@
+{
+    "EarliestStart": 9,
+    "LatestEnd": 16,
+    "LengthOfMeetingWindow": 12,
+    "IncludeNoAsOption": true,
+    "NoEmoji": ":no_entry_sign:"
+}
