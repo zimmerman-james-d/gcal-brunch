@@ -29,7 +29,7 @@ END_OF_DAY = PREF_OPTIONS['LatestEnd']
 MEETING_WINDOW = PREF_OPTIONS['LengthOfMeetingWindow']
 WEEKEND_DAYS_AS_INT = [5, 6]
 ATTENDEES = [None]
-EARLIEST_MEETING_TIME = datetime.datetime(2024, 11, 6, tzinfo=datetime.timezone.utc)
+EARLIEST_MEETING_TIME = datetime.datetime(2024, 12, 3, tzinfo=datetime.timezone.utc)
 
 
 def api_queries(time_min: datetime.datetime,
@@ -220,7 +220,7 @@ def main() -> None:
     print(
         "An automated script was used to generate a list of potential meeting times.",
         "Here's a list of emoji to select times that work for you!")
-    start_time = 
+    start_time = EARLIEST_MEETING_TIME
     end_time = start_time + datetime.timedelta(days=MEETING_WINDOW)
     busy_times, time_zones = api_queries(start_time, end_time)
     early_start, late_end = get_min_max_start(time_zones)
